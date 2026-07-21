@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitație Botez · Sofia Maria</title>
+<meta property="og:title" content="Invitație · Botezul Sofiei Maria 💗">
+<meta property="og:description" content="Sâmbătă, 31 Octombrie 2026 · Vă așteptăm cu drag! Familia Voază">
+<meta property="og:type" content="website">
+<meta name="description" content="Invitație la botezul Sofiei Maria · 31 Octombrie 2026">
+<meta name="theme-color" content="#F9DFE3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roz-fond:#F9DFE3;
+  --roz-pal:#FCEAEC;
+  --roz:#F0B9C0;
+  --aur:#C9A24B;
+  --aur-deschis:#E3C377;
+  --aur-inchis:#A8843A;
+  --cerneala:#5A4448;
+  --cerneala-slaba:#8E7378;
+  --alb:#FFFDFC;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255,255,255,.75) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 30%, #FCE7EA 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 70%, #F6CDD3 0%, transparent 55%),
+    linear-gradient(175deg, #FBE4E7 0%, #F7D6DB 55%, #F4CCD3 100%);
+  background-attachment:fixed;
+  color:var(--cerneala);
+  overflow-x:hidden;
+  min-height:100vh;
+}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* ===================== PLIC INTRO ===================== */
+#plic-scena{
+  position:fixed;inset:0;z-index:100;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:
+    radial-gradient(ellipse at 30% 20%, #FDEFF1 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 80%, #F3C6CD 0%, transparent 50%),
+    linear-gradient(175deg, #FBE4E7 0%, #F5CFD6 100%);
+  cursor:pointer;
+  transition:opacity .9s ease, visibility .9s;
+}
+#plic-scena.deschis{opacity:0;visibility:hidden;pointer-events:none}
+.plic{
+  position:relative;width:min(320px,82vw);aspect-ratio:1.45;
+  animation:plutire 3.6s ease-in-out infinite;
+}
+@keyframes plutire{
+  0%,100%{transform:translateY(0) rotate(-.6deg)}
+  50%{transform:translateY(-12px) rotate(.6deg)}
+}
+.plic-corp{
+  position:absolute;inset:0;
+  background:linear-gradient(150deg,#F7C9CE 0%,#F0AEB6 100%);
+  border-radius:8px;
+  box-shadow:0 24px 60px -18px rgba(160,110,105,.45), 0 4px 14px rgba(160,110,105,.18);
+}
+.plic-corp::before,.plic-corp::after{
+  content:"";position:absolute;top:0;width:52%;height:100%;
+}
+.plic-corp::before{
+  left:0;
+  background:linear-gradient(115deg,#F3BCC2 48%,transparent 50%);
+  border-radius:8px 0 0 8px;
+}
+.plic-corp::after{
+  right:0;
+  background:linear-gradient(245deg,#F3BCC2 48%,transparent 50%);
+  border-radius:0 8px 8px 0;
+}
+.card-preview{
+  position:absolute;left:6%;right:6%;top:8%;bottom:14%;
+  background:linear-gradient(165deg,#FCE1E4 0%,#F8CFD5 100%);
+  border-radius:6px;
+  border:1px solid rgba(201,162,75,.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;
+  transition:transform 1s cubic-bezier(.22,1,.36,1) .35s;
+}
+.plic-clapa{
+  position:absolute;top:0;left:0;right:0;height:52%;
+  background:linear-gradient(180deg,#F2B4BC 0%,#EA9BA6 100%);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:8px 8px 0 0;
+  transform-origin:top center;
+  transition:transform .8s cubic-bezier(.6,.05,.3,1);
+  z-index:3;
+}
+.plic.deschide .plic-clapa{transform:rotateX(178deg);z-index:1}
+.plic.deschide .card-preview{transform:translateY(-46%) scale(1.04)}
+.sigiliu{
+  position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);
+  width:58px;height:58px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#E3C377,var(--aur) 55%,var(--aur-inchis));
+  box-shadow:0 5px 16px rgba(168,132,58,.5), inset 0 2px 5px rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#FFF9EC;
+  z-index:4;
+  transition:transform .5s ease, opacity .5s ease;
+}
+.plic.deschide .sigiliu{transform:translate(-50%,-50%) scale(.2) rotate(80deg);opacity:0}
+.plic-indiciu{
+  position:absolute;left:50%;bottom:-3.2rem;transform:translateX(-50%);
+  white-space:nowrap;font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--cerneala-slaba);
+  animation:puls 2.2s ease-in-out infinite;
+}
+@keyframes puls{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* stele care cad */
+.stea{
+  position:fixed;top:-4vh;z-index:101;pointer-events:none;
+  color:var(--aur);
+  animation:cadere linear forwards;
+}
+@keyframes cadere{
+  to{transform:translateY(112vh) rotate(300deg);opacity:0}
+}
+
+/* fluturi */
+.fluture{
+  position:fixed;z-index:102;pointer-events:none;font-size:1.3rem;
+  will-change:transform;filter:drop-shadow(0 3px 5px rgba(160,110,105,.25));
+}
+
+/* ===================== CONȚINUT ===================== */
+#continut{
+  opacity:0;transition:opacity 1s ease .5s;
+  max-width:680px;margin:0 auto;padding:0 1.4rem 4rem;
+}
+#continut.vizibil{opacity:1}
+section{padding:3.6rem 0 1rem;text-align:center}
+.eticheta{
+  display:inline-block;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--aur-inchis);margin-bottom:1.2rem;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:clamp(2.8rem,10vw,4.4rem);line-height:1.05;color:var(--cerneala);
+}
+.ornament{width:120px;margin:1.2rem auto 0;display:block}
+.intro{
+  font-size:1.02rem;line-height:1.75;color:var(--cerneala-slaba);
+  max-width:46ch;margin-inline:auto;
+}
+.data-mare{
+  font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;
+  margin-top:1.6rem;letter-spacing:.05em;
+  background:linear-gradient(100deg,var(--aur-inchis) 0%,var(--aur-deschis) 45%,var(--aur-inchis) 90%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:var(--aur-inchis);
+}
+
+/* countdown */
+.countdown{
+  display:flex;justify-content:center;gap:.7rem;margin-top:2rem;flex-wrap:wrap;
+}
+.cd-bloc{
+  min-width:76px;padding:1rem .5rem .75rem;position:relative;
+  background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,251,250,.8));
+  border:1px solid rgba(201,162,75,.4);border-radius:14px;
+  box-shadow:0 12px 30px -14px rgba(150,90,100,.4), inset 0 1px 0 rgba(255,255,255,.9);
+  backdrop-filter:blur(4px);
+}
+.cd-bloc::before{
+  content:"";position:absolute;top:0;left:18%;right:18%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--aur-deschis),transparent);
+  border-radius:0 0 4px 4px;
+}
+.cd-num{
+  font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;
+  color:var(--cerneala);font-variant-numeric:tabular-nums;
+}
+.cd-lbl{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cerneala-slaba);margin-top:.15rem;
+}
+
+/* carduri evenimente */
+.card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,250,250,.88));
+  border:1px solid rgba(201,162,75,.35);border-radius:18px;
+  padding:2.2rem 1.7rem;margin-top:1.2rem;
+  box-shadow:0 20px 50px -22px rgba(150,90,100,.45), inset 0 1px 0 rgba(255,255,255,.9);
+  backdrop-filter:blur(4px);
+}
+.card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent 5%,var(--aur-deschis) 35%,var(--aur) 50%,var(--aur-deschis) 65%,transparent 95%);
+}
+.card h2{
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;color:var(--cerneala);
+}
+.card .ora{
+  font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--aur-inchis);margin:.6rem 0 .8rem;
+}
+.card p{font-size:.98rem;line-height:1.7;color:var(--cerneala-slaba)}
+.btn{
+  display:inline-block;margin-top:1.1rem;padding:.7rem 1.7rem;
+  border:1px solid var(--aur);border-radius:999px;
+  color:var(--aur-inchis);text-decoration:none;font-size:.85rem;
+  letter-spacing:.14em;text-transform:uppercase;background:transparent;
+  cursor:pointer;font-family:'Jost',sans-serif;
+  transition:background .3s,color .3s,transform .2s;
+}
+.btn:hover{background:var(--aur);color:#FFF9EC;transform:translateY(-2px)}
+.btn.plin{
+  background:linear-gradient(120deg,var(--aur-inchis),var(--aur) 45%,var(--aur-deschis));
+  color:#FFF9EC;border-color:transparent;
+  box-shadow:0 10px 24px -10px rgba(168,132,58,.55);
+}
+.btn.plin:hover{filter:brightness(1.06)}
+
+/* familie */
+.familie{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.2rem}
+@media(min-width:520px){.familie{grid-template-columns:1fr 1fr}}
+.fam-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(165deg,rgba(255,255,255,.95),rgba(252,234,236,.85));
+  border:1px solid rgba(201,162,75,.3);border-radius:18px;padding:1.9rem 1.2rem;
+  box-shadow:0 16px 40px -20px rgba(150,90,100,.4), inset 0 1px 0 rgba(255,255,255,.9);
+}
+.fam-card::before{
+  content:"";position:absolute;top:0;left:20%;right:20%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--aur-deschis),transparent);
+}
+.fam-card .rol{
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--aur-inchis);
+  margin-bottom:.55rem;
+}
+.fam-card .nume{font-size:1.25rem;font-weight:600;line-height:1.4;color:var(--cerneala)}
+
+/* rsvp */
+.rsvp-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.2rem}
+#rsvp-mesaj{
+  margin-top:1.1rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+  color:var(--aur-inchis);min-height:1.4em;
+}
+footer{
+  text-align:center;padding:2.5rem 0 1rem;
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--cerneala-slaba);
+}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.activ{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- PLIC INTRO -->
+<div id="plic-scena" role="button" tabindex="0" aria-label="Deschide invitația">
+  <div class="plic" id="plic">
+    <div class="plic-corp"></div>
+    <div class="card-preview"></div>
+    <div class="plic-clapa"></div>
+    <div class="sigiliu" id="sigiliu">♥</div>
+    <div class="plic-indiciu">Atinge pentru a deschide</div>
+  </div>
+</div>
+
+<main id="continut">
+
+  <section id="hero">
+    <div class="reveal">
+      <span class="eticheta" id="eticheta-hero">Botezul micuței</span>
+      <h1 id="nume-copil">Sofia Maria</h1>
+      <svg class="ornament" viewBox="0 0 120 20" fill="none" aria-hidden="true">
+        <path d="M4 10 H44 M76 10 H116" stroke="#C9A24B" stroke-width="1"/>
+        <path d="M60 3 l2.1 4.6 4.9.5-3.7 3.3 1 4.9-4.3-2.5-4.3 2.5 1-4.9-3.7-3.3 4.9-.5z" fill="#C9A24B"/>
+      </svg>
+      <p class="intro" style="margin-top:1.8rem">Cu inimile pline de bucurie, vă invităm să fiți alături de noi în ziua în care fetița noastră primește Taina Sfântului Botez.</p>
+      <div class="data-mare" id="data-text">Sâmbătă · 31 Octombrie 2026</div>
+    </div>
+    <div class="reveal">
+      <div class="countdown" id="countdown" aria-label="Timp rămas până la eveniment">
+        <div class="cd-bloc"><div class="cd-num" id="cd-zile">0</div><div class="cd-lbl">Zile</div></div>
+        <div class="cd-bloc"><div class="cd-num" id="cd-ore">0</div><div class="cd-lbl">Ore</div></div>
+        <div class="cd-bloc"><div class="cd-num" id="cd-min">0</div><div class="cd-lbl">Minute</div></div>
+        <div class="cd-bloc"><div class="cd-num" id="cd-sec">0</div><div class="cd-lbl">Secunde</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="evenimente">
+    <div class="reveal">
+      <span class="eticheta">Programul zilei</span>
+      <div class="card">
+        <h2>Sfânta Taină a Botezului</h2>
+        <div class="ora" id="ora-biserica">Ora 13:00</div>
+        <p id="loc-biserica"></p>
+        <a class="btn" id="harta-biserica" href="#" target="_blank" rel="noopener">Vezi harta</a>
+      </div>
+      <div class="card">
+        <h2>Petrecerea</h2>
+        <div class="ora" id="ora-restaurant">Ora 18:00</div>
+        <p id="loc-restaurant"></p>
+        <a class="btn" id="harta-restaurant" href="#" target="_blank" rel="noopener">Vezi harta</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="familie-sect">
+    <div class="reveal">
+      <span class="eticheta">Alături de noi</span>
+      <div class="familie">
+        <div class="fam-card">
+          <div class="rol">Părinți</div>
+          <div class="nume serif" id="nume-parinti"></div>
+        </div>
+        <div class="fam-card">
+          <div class="rol">Nași</div>
+          <div class="nume serif" id="nume-nasi"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <div class="reveal">
+      <span class="eticheta">Confirmare</span>
+      <div class="card">
+        <h2>Ne bucurăm să te avem alături</h2>
+        <p>Te rugăm să ne confirmi prezența până la data de <strong id="data-limita">20 Octombrie</strong>.</p>
+        <div class="rsvp-btns">
+          <button class="btn plin" id="btn-da">Voi fi acolo</button>
+          <button class="btn" id="btn-nu">Nu pot ajunge</button>
+        </div>
+        <div id="rsvp-mesaj" aria-live="polite"></div>
+        <a class="btn" id="btn-calendar" href="#" target="_blank" rel="noopener" style="margin-top:.4rem">Adaugă în calendar</a>
+        <p style="margin-top:1.4rem;font-size:.88rem;opacity:.75">Confirmare telefonică: <a id="telefon" href="#" style="color:var(--aur-inchis)"></a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Cu drag, familia <span id="nume-familie">Voază</span> 👧🏼🎀</footer>
+</main>
+
+<script>
+/* ============================================================
+   CONFIG — editează DOAR aici. Totul se actualizează automat.
+   ============================================================ */
+const CONFIG = {
+  numeCopil: "Sofia Maria",
+  numeScurt: "Sofia",                       // pe plic + sigiliu (inițiala)
+  gen: "fetita",                            // "fetita" sau "baiat"
+  dataEveniment: "2026-10-31T13:00:00",     // ISO — pentru countdown + calendar
+  dataText: "Sâmbătă · 31 Octombrie 2026",
+  oraBiserica: "Ora 13:00",
+  locBiserica: 'Biserica „Sfânta Cuvioasă Parascheva"<br>Dridu, Ialomița',
+  hartaBiserica: "https://maps.app.goo.gl/H8KWoxS1umNFLZHc6",
+  oraRestaurant: "Ora 18:00",
+  locRestaurant: 'Manifesto Events<br>Fierbinți-Târg',
+  hartaRestaurant: "https://maps.google.com/?q=Manifesto+Events+Fierbinti-Targ",
+  numeParinti: "Toma Georgiana Daniela & Voază Daniel Marian",
+  numeNasi: "Szekely Hilda Henrietta & Voază Nicu Ștefan",
+  dataLimitaRSVP: "20 Octombrie",
+  telefon: "+49 15562 074649",
+  whatsapp: "40734952855",                  // RSVP prin WhatsApp (fără + și spații)
+  numeFamilie: "Voază"
+};
+
+/* ---------- aplicare CONFIG ---------- */
+const $ = id => document.getElementById(id);
+$('nume-copil').textContent   = CONFIG.numeCopil;
+$('eticheta-hero').textContent = CONFIG.gen === "fetita" ? "Botezul micuței" : "Botezul micuțului";
+$('data-text').textContent    = CONFIG.dataText;
+$('ora-biserica').textContent = CONFIG.oraBiserica;
+$('loc-biserica').innerHTML   = CONFIG.locBiserica;
+$('harta-biserica').href      = CONFIG.hartaBiserica;
+$('ora-restaurant').textContent = CONFIG.oraRestaurant;
+$('loc-restaurant').innerHTML = CONFIG.locRestaurant;
+$('harta-restaurant').href    = CONFIG.hartaRestaurant;
+$('nume-parinti').textContent = CONFIG.numeParinti;
+$('nume-nasi').textContent    = CONFIG.numeNasi;
+$('data-limita').textContent  = CONFIG.dataLimitaRSVP;
+$('telefon').textContent      = CONFIG.telefon;
+$('telefon').href             = "tel:" + CONFIG.telefon.replace(/\s+/g,"");
+$('nume-familie').textContent = CONFIG.numeFamilie;
+
+/* Google Calendar */
+(function(){
+  const inceput = new Date(CONFIG.dataEveniment);
+  const sfarsit = new Date(inceput.getTime() + 10*3600*1000);
+  const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g,"");
+  const url = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent("Botez " + CONFIG.numeCopil)
+    + "&dates=" + fmt(inceput) + "/" + fmt(sfarsit)
+    + "&details=" + encodeURIComponent("Sfânta Taină a Botezului și petrecerea. Vă așteptăm cu drag! Familia " + CONFIG.numeFamilie)
+    + "&location=" + encodeURIComponent("Manifesto Events, Fierbinți-Târg");
+  $('btn-calendar').href = url;
+})();
+
+/* ---------- countdown până la 31 octombrie ---------- */
+const tinta = new Date(CONFIG.dataEveniment).getTime();
+function tick(){
+  const diff = Math.max(0, tinta - Date.now());
+  const z = Math.floor(diff / 86400000);
+  const o = Math.floor(diff % 86400000 / 3600000);
+  const m = Math.floor(diff % 3600000 / 60000);
+  const s = Math.floor(diff % 60000 / 1000);
+  $('cd-zile').textContent = z;
+  $('cd-ore').textContent  = String(o).padStart(2,"0");
+  $('cd-min').textContent  = String(m).padStart(2,"0");
+  $('cd-sec').textContent  = String(s).padStart(2,"0");
+  if(diff === 0){
+    $('countdown').innerHTML = '<div class="data-mare">✦ Astăzi este ziua cea mare! ✦</div>';
+    clearInterval(intervalCd);
+  }
+}
+tick();
+const intervalCd = setInterval(tick, 1000);
+
+/* ---------- plic ---------- */
+const redusa = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let plicDeschis = false;
+function deschidePlic(){
+  if(plicDeschis) return;
+  plicDeschis = true;
+  $('plic').classList.add('deschide');
+  if(!redusa) ploaieStele(46);
+  setTimeout(()=>{
+    $('plic-scena').classList.add('deschis');
+    $('continut').classList.add('vizibil');
+    porneesteReveal();
+  }, 950);
+}
+$('plic-scena').addEventListener('click', deschidePlic);
+$('plic-scena').addEventListener('keydown', e=>{
+  if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); deschidePlic(); }
+});
+
+/* ---------- ploaie de stele ---------- */
+function ploaieStele(n){
+  for(let i=0;i<n;i++){
+    const st = document.createElement('div');
+    st.className = 'stea';
+    st.textContent = Math.random() < .6 ? '❤️' : '🦋';
+    st.style.left = Math.random()*100 + 'vw';
+    st.style.fontSize = (0.7 + Math.random()*1.1) + 'rem';
+    st.style.animationDuration = (2.2 + Math.random()*2.4) + 's';
+    st.style.animationDelay = (Math.random()*.8) + 's';
+    document.body.appendChild(st);
+    setTimeout(()=>st.remove(), 6000);
+  }
+}
+
+/* ---------- fluturi (un singur rAF loop) ---------- */
+const fluturi = [];
+function porneșteFluturi(){
+  const n = innerWidth < 520 ? 5 : 8;
+  for(let i=0;i<n;i++){
+    const el = document.createElement('div');
+    el.className = 'fluture';
+    el.textContent = '🦋';
+    document.body.appendChild(el);
+    fluturi.push({
+      el,
+      x: Math.random()*innerWidth,
+      y: Math.random()*innerHeight,
+      vx:(Math.random()-.5)*.7,
+      vy:(Math.random()-.5)*.5,
+      f: Math.random()*Math.PI*2,
+      s:.55 + Math.random()*.55
+    });
+  }
+  requestAnimationFrame(zbor);
+}
+function zbor(){
+  for(const b of fluturi){
+    b.f += .05;
+    b.x += b.vx + Math.sin(b.f)*.6;
+    b.y += b.vy + Math.cos(b.f*.7)*.4;
+    if(b.x < -40) b.x = innerWidth + 40;
+    if(b.x > innerWidth + 40) b.x = -40;
+    if(b.y < -40) b.y = innerHeight + 40;
+    if(b.y > innerHeight + 40) b.y = -40;
+    b.el.style.transform =
+      `translate(${b.x}px,${b.y}px) scale(${b.s}) rotate(${Math.sin(b.f)*22}deg)`;
+  }
+  requestAnimationFrame(zbor);
+}
+
+/* ---------- reveal on scroll ---------- */
+function porneesteReveal(){
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('activ'); });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+/* ---------- RSVP ---------- */
+function trimiteWhatsApp(mesaj){
+  window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(mesaj), '_blank');
+}
+$('btn-da').addEventListener('click', ()=>{
+  $('rsvp-mesaj').textContent = '❤️ Minunat! Vă așteptăm cu drag. ❤️';
+  if(!redusa) ploaieStele(40);
+  trimiteWhatsApp('Bună! Confirm cu drag: voi fi acolo la botezul micuței ' + CONFIG.numeCopil + ', pe 31 Octombrie 2026. ❤️');
+});
+$('btn-nu').addEventListener('click', ()=>{
+  $('rsvp-mesaj').textContent = 'Vă mulțumim că ne-ați anunțat.';
+  trimiteWhatsApp('Bună! Din păcate nu pot ajunge la botezul micuței ' + CONFIG.numeCopil + ', pe 31 Octombrie 2026. Vă doresc o zi minunată!');
+});
+
+/* fluturașii zboară în jurul plicului de la început */
+if(!redusa) porneșteFluturi();
+</script>
+</body>
+</html>
