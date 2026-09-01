@@ -28,12 +28,14 @@
 html{scroll-behavior:smooth}
 body{
   font-family:'Jost',sans-serif;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255,255,255,.75) 0%, transparent 60%),
-    radial-gradient(ellipse at 15% 30%, #FCE7EA 0%, transparent 50%),
-    radial-gradient(ellipse at 85% 70%, #F6CDD3 0%, transparent 55%),
-    linear-gradient(175deg, #FBE4E7 0%, #F7D6DB 55%, #F4CCD3 100%);
-  background-attachment:fixed;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255,255,255,.55) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(251,228,231,.82) 0%, rgba(247,214,219,.86) 45%, rgba(244,204,211,.90) 100%),
+    url('assets/sofia.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center 18%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed;
   color:var(--cerneala);
   overflow-x:hidden;
   min-height:100vh;
